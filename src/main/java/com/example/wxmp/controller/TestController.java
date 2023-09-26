@@ -21,14 +21,6 @@ import java.util.List;
 public class TestController {
     @Autowired
     private WxMpService mpService;
-    @GetMapping("/webhook")
-    public String webhook(HttpServletRequest request) throws WxErrorException {
-        String token = "123";
-        // 获取请求参数
-        // 验证失败，返回错误信息
-        return "success";
-
-    }
     @GetMapping("/test")
     public String test(HttpServletRequest request) throws WxErrorException {
         String token = "123";
@@ -59,11 +51,11 @@ public class TestController {
     public String test1() throws WxErrorException {
         WxMpTemplateMessage wxMpTemplateMessage = new WxMpTemplateMessage();
         wxMpTemplateMessage.setTemplateId("WTxq1rBHRevv-aJ82af5-ytxObZJc3acG-XLbGKrdHY");
-        wxMpTemplateMessage.setToUser("obXBL65rcL_WdtZ0544ys5TriLGA");
+        wxMpTemplateMessage.setToUser("obXBL67vSuyj6fMjLtO6e0M2Uyio");
         List list = new ArrayList();
         WxMpTemplateData data = new WxMpTemplateData();
         data.setName("username");
-        data.setValue("俞");
+        data.setValue("付");
         data.setColor("#173177");
         WxMpTemplateData data2 = new WxMpTemplateData();
         data2.setName("order_number");
